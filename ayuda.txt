@@ -1,6 +1,11 @@
-Mostrar Todos los cambios en la APP
+Fuera de camara agregar BandsDisabledMessageStyled en bandsStyles
 
-cacheTime en Bands.js
+index.js	            Se eliminan las opciones globales definidas en la anterior rama
 
-Para global options Arammos las defaultOptions en index.js
-En Bands.js se eliminan las opciones del useQuery porque ya están definidas globalmente
+pages/bands/Bands.js	Se agregan configuraciones de useQuery (enabled) + propiedades isIdle y refetch para gestionar la petición + mensaje en la UI para cuando la consulta esté deshablitida
+
+CALLBACKS
+pages/bands/Bands.js	Se eliminan los features de la rama anterior (isIdle, refetch, enabled, mensaje de la UI) + se definen los Callbacks en la configuración de useQuery
+
+ERROR RETRIES
+pages/bands/Bands.js	Se eliminan los Callbacks del anterior feature + la implmentanción de las propiedades del ErrorRetries
