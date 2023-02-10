@@ -1,27 +1,14 @@
 import React from "react";
-import axios from "axios";
-import { useQuery } from "react-query";
+import { useBandsData } from "../../hooks/useBandsData";
 
 import Card from "../../components/card/Card";
 import Loader from "../../components/loader/Loader";
+import Modal from "../../components/modal/Modal";
 
 import { BandsContainerStyled, BandsErrorMessageStyled } from "./BandsStyles";
 
-const fetchBands = () => {
-	return axios.get("http://localhost:3006/bandas");
-};
-
 const Bands = () => {
-	const { isLoading, data, isError, error } = useQuery("bands", fetchBands, {
-		cacheTime: 4000,
-		select: (data) => {
-			const newBands = data.data.map((band) => ({ ...band, genre: "Cumbia" }));
-			return { ...data, data: newBands };
-		},
-	});
-
-	//CUSTOM HOOK
-	// const { data, isLoading, isError, error } = useBandsData();
+	const { data, isLoading, isError, error } = useBandsData();
 
 	return (
 		<>
@@ -35,6 +22,7 @@ const Bands = () => {
 					{data.data.map((band) => (
 						<Card key={band.id} {...band} />
 					))}
+					<Modal />
 				</BandsContainerStyled>
 			)}
 		</>

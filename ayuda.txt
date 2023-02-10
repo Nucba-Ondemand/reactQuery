@@ -1,14 +1,22 @@
 CAMBIOS GRANDES.
+components/modal/Modal.js (Sin logica)
+components/modal/ModalStyles.js
+components/modalInput/ModalInput.js (Sin logica)
+components/modalInput/ModalInputStyles.js
+components/openModal/OpenModal.js (Sin logica)
+components/openModal/OpenModalStyles.js
+db.json
+pages/bands/Bands.js (Se agrega modal)
+Agregar carpeta utils
+Agregar estilos a card styles
+Cambiar bandButtonStyles
+components/card/CardStyles.js
 
-SE AGREGA LA RUTA "BAND"
-SE AGREGA EL COMPONENTE BAND SIN LOGICA
-SE AGREGA BANDSTYLES
-SE EDITA DB
-SE AGREGA CARD FOOTER
-SE AGREGA CARDFOOTERSTYLES
-SE EDITA USEBANDSDATA
-SE EDITA VARDSTYLES
-
-Agregamos logica a card
-Agregamos logica a band
-Armamos useBandData y usamos su logica en band
+Agregar lógica a Modal
+Agregar lógica a OpenModal
+Agregar lógica a ModalInput
+Armar useAddBand
+useAddBanden modal.js
+Modificar Card para render condicional y Button para agregar borrar
+Armar useDeleteBand
+useDeleteBand en bandbutton

@@ -35,6 +35,12 @@ export const CardDescriptionStyled = styled.p`
 	line-height: 20px;
 `;
 
+export const ButtonsContainerStyled = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+`;
+
 export const LinkStyled = styled(Link)`
 	text-decoration: none;
 	color: white;
