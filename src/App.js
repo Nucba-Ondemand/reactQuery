@@ -1,4 +1,5 @@
 import { useQuery } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 import axios from "axios";
 
 import Card from "./components/card/Card";
@@ -12,7 +13,17 @@ const fetchBands = () => {
 };
 
 function App() {
-	const { isLoading, data, isError, error } = useQuery("bands", fetchBands);
+	const { isLoading, data, isError, error, isFetching } = useQuery(
+		"bands",
+		fetchBands,
+		{
+			refetchOnMount: "always",
+			refetchOnWindowFocus: true,
+			refetchOnReconnect: false,
+			refetchInterval: 3000,
+			refetchIntervalInBackground: false,
+		}
+	);
 
 	return (
 		<>
@@ -20,11 +31,20 @@ function App() {
 			{isError && (
 				<h2 style={{ color: "red", textAlign: "center" }}>{error.message}</h2>
 			)}
+
 			<AppContainerStyled>
 				{data?.data.map((band) => (
 					<Card key={band.id} {...band} />
 				))}
 			</AppContainerStyled>
+
+			{isFetching && (
+				<h2 style={{ color: "white", textAlign: "center" }}>
+					Validando los datos...
+				</h2>
+			)}
+
+			<ReactQueryDevtools />
 			<GlobalStyles />
 		</>
 	);
