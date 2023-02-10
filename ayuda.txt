@@ -1,3 +1,7 @@
 App.js	Importación y renderizado del component ReactQueryDevtools
 
-App.js	Propiedad isFetching y mensaje de validando datos en la UI + opciones de Refecth
+Cambios en App.
+-Refetch
+-staleTime
+
+Para cache options hay que hacer cambios GRANDES

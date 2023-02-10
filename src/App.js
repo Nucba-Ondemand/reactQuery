@@ -24,6 +24,9 @@ function App() {
 			refetchIntervalInBackground: false,
 		}
 	);
+	// {
+	//   staleTime: 3000,
+	// }
 
 	return (
 		<>
