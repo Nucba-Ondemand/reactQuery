@@ -1,3 +1,13 @@
+Fuera de camara, instalar Mui y agregar el loader en components
+
 instalar react query. (npm i react-query@3)
 
 QueryClientProvider En index.js
+
+EMPEZAMOS A RENDERIZAR DATA QUE VENGA DEL SERVER
+
+App.js	        fetchBands + useQuery + Renderizado dinámico de la data
+Card.js	        Renderiza los datos de la API pasados por props
+BandPhoto.js	Renderiza los datos de la API pasados por props
+BandButton.js	Renderiza los datos de la API pasados por props
+App.js	        Propiedades error / isError + mensaje de error en la UI
