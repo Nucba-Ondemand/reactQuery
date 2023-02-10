@@ -1,7 +1,6 @@
-App.js	Importación y renderizado del component ReactQueryDevtools
+Mostrar Todos los cambios en la APP
 
-Cambios en App.
--Refetch
--staleTime
+cacheTime en Bands.js
 
-Para cache options hay que hacer cambios GRANDES
+Para global options Arammos las defaultOptions en index.js
+En Bands.js se eliminan las opciones del useQuery porque ya están definidas globalmente
