@@ -10,17 +10,21 @@ import {
 	CardTitleStyled,
 } from "./CardStyles";
 
-const Card = () => {
+const Card = (props) => {
+	const { name, img, listeners, genre } = props;
+
 	return (
 		<CardContainerStyled>
-			<BandPhoto />
+			<BandPhoto img={img} alt={name} />
 
 			<CardContentContainerStyled>
-				<CardTitleStyled>La Scaloneta</CardTitleStyled>
-				<CardDescriptionStyled>3 títulos profesionales</CardDescriptionStyled>
+				<CardTitleStyled>{name}</CardTitleStyled>
+				<CardDescriptionStyled>
+					{listeners} oyentes mensuales
+				</CardDescriptionStyled>
 			</CardContentContainerStyled>
 
-			<BandButton />
+			<BandButton genre={genre} />
 		</CardContainerStyled>
 	);
 };

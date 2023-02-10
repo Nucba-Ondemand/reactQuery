@@ -1,0 +1,3 @@
+instalar react query. (npm i react-query@3)
+
+QueryClientProvider En index.js

@@ -1,18 +1,15 @@
 import React from "react";
 import {
-  BandPhotoContainerStyled,
-  BandPhotoImageStyled,
+	BandPhotoContainerStyled,
+	BandPhotoImageStyled,
 } from "./BandPhotoStyles";
 
-const BandPhoto = () => {
-  return (
-    <BandPhotoContainerStyled>
-      <BandPhotoImageStyled
-        src="https://res.cloudinary.com/dcatzxqqf/image/upload/v1655753168/coding/ReactQuery/Scaloneta_xx9xpm.jpg"
-        alt="La Scaloneta"
-      />
-    </BandPhotoContainerStyled>
-  );
+const BandPhoto = ({ img, alt }) => {
+	return (
+		<BandPhotoContainerStyled>
+			<BandPhotoImageStyled src={img} alt={alt} />
+		</BandPhotoContainerStyled>
+	);
 };
 
 export default BandPhoto;
