@@ -1,11 +1,14 @@
-Fuera de camara agregar BandsDisabledMessageStyled en bandsStyles
+CAMBIOS GRANDES.
 
-index.js	            Se eliminan las opciones globales definidas en la anterior rama
+SE AGREGA LA RUTA "BAND"
+SE AGREGA EL COMPONENTE BAND SIN LOGICA
+SE AGREGA BANDSTYLES
+SE EDITA DB
+SE AGREGA CARD FOOTER
+SE AGREGA CARDFOOTERSTYLES
+SE EDITA USEBANDSDATA
+SE EDITA VARDSTYLES
 
-pages/bands/Bands.js	Se agregan configuraciones de useQuery (enabled) + propiedades isIdle y refetch para gestionar la petición + mensaje en la UI para cuando la consulta esté deshablitida
-
-CALLBACKS
-pages/bands/Bands.js	Se eliminan los features de la rama anterior (isIdle, refetch, enabled, mensaje de la UI) + se definen los Callbacks en la configuración de useQuery
-
-ERROR RETRIES
-pages/bands/Bands.js	Se eliminan los Callbacks del anterior feature + la implmentanción de las propiedades del ErrorRetries
+Agregamos logica a card
+Agregamos logica a band
+Armamos useBandData y usamos su logica en band
