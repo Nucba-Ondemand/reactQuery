@@ -1,22 +1,15 @@
-CAMBIOS GRANDES.
-components/modal/Modal.js (Sin logica)
-components/modal/ModalStyles.js
-components/modalInput/ModalInput.js (Sin logica)
-components/modalInput/ModalInputStyles.js
-components/openModal/OpenModal.js (Sin logica)
-components/openModal/OpenModalStyles.js
-db.json
-pages/bands/Bands.js (Se agrega modal)
-Agregar carpeta utils
-Agregar estilos a card styles
-Cambiar bandButtonStyles
-components/card/CardStyles.js
+QUERY INVALIDATION
+hooks/useAddBand.js	    Se agrega la lógica del invalidateQueries
+hooks/useDeleteBand.js	Se agrega la lógica del invalidateQueries
 
-Agregar lógica a Modal
-Agregar lógica a OpenModal
-Agregar lógica a ModalInput
-Armar useAddBand
-useAddBanden modal.js
-Modificar Card para render condicional y Button para agregar borrar
-Armar useDeleteBand
-useDeleteBand en bandbutton
+HANDLING MUTATION RESPONSE
+hooks/useAddBand.js	        Se agrega la lógica del setQueryData
+
+hooks/useDeleteBand.js	    Se agrega la lógica del setQueryData + propiedad transformResponse de Axios para modificar la respuesta del método delete (evitando que devuelva un objeto vacío)
+
+hooks/useBandsData.js	    Se modifica la configuración del staleTime
+
+OPTIMISTIC UPDATE
+hooks/useAddBand.js	Se agrega la lógica del onMutate, onError y onSettled
+
+hooks/useDeleteBand.js	Se agrega la lógica del onMutate, onError y onSettled
