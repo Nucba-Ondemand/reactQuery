@@ -1,6 +1,0 @@
-Mostrar Todos los cambios en la APP
-
-cacheTime en Bands.js
-
-Para global options Arammos las defaultOptions en index.js
-En Bands.js se eliminan las opciones del useQuery porque ya están definidas globalmente
