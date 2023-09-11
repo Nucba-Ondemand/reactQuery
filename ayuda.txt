@@ -1,7 +1,0 @@
-App.js	Importación y renderizado del component ReactQueryDevtools
-
-Cambios en App.
--Refetch
--staleTime
-
-Para cache options hay que hacer cambios GRANDES
